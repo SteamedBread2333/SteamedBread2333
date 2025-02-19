@@ -8,7 +8,7 @@
   </picture>
 </div>
 
-![](https://komarev.com/ghpvc/?username=SteamedBread2333)
+![NPM Downloads by package author](https://img.shields.io/npm-stat/dy/steamedbread2333?label=NPM%20Downloads)
 
 ### Languages
 ![HTML](https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=html5&logoColor=white)
@@ -21,4 +21,4 @@
   <img src="./profile-3d-contrib/profile-night-rainbow.svg" />
 </picture>
 
-![NPM Downloads by package author](https://img.shields.io/npm-stat/dy/steamedbread2333?style=for-the-badge&label=NPM%20DOWNLOADS)
+![](https://komarev.com/ghpvc/?username=SteamedBread2333)
