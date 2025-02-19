@@ -20,3 +20,5 @@
   <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-gitblock.svg" />
   <img src="./profile-3d-contrib/profile-night-rainbow.svg" />
 </picture>
+
+![NPM Downloads by package author](https://img.shields.io/npm-stat/dy/steamedbread2333?style=for-the-badge&label=NPM%20DOWNLOADS)
