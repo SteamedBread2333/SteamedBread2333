@@ -1,7 +1,5 @@
 <h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
 
-![NPM Downloads by package author](https://img.shields.io/npm-stat/dy/steamedbread2333?label=NPM%20Downloads&style=for-the-badge)
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-gitblock.svg" />
