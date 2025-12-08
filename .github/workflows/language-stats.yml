@@ -1,0 +1,271 @@
+name: Language Statistics
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC (08:00 Beijing time)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/language-stats.yml'
+
+jobs:
+  update-language-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests
+      
+      - name: Fetch language statistics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python << 'EOF'
+          import requests
+          import json
+          import os
+          from collections import defaultdict
+          from datetime import datetime
+          
+          GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
+          USERNAME = 'SteamedBread2333'
+          headers = {
+              'Authorization': f'token {GITHUB_TOKEN}',
+              'Accept': 'application/vnd.github.v3+json'
+          }
+          
+          # Fetch all public repositories
+          repos = []
+          page = 1
+          per_page = 100
+          
+          while True:
+              url = f'https://api.github.com/users/{USERNAME}/repos?type=public&page={page}&per_page={per_page}'
+              response = requests.get(url, headers=headers)
+              response.raise_for_status()
+              data = response.json()
+              
+              if not data:
+                  break
+              
+              repos.extend([repo['name'] for repo in data])
+              page += 1
+              
+              if len(data) < per_page:
+                  break
+          
+          print(f"Found {len(repos)} public repositories")
+          
+          # Count language usage
+          language_stats = defaultdict(int)
+          
+          for repo_name in repos:
+              url = f'https://api.github.com/repos/{USERNAME}/{repo_name}/languages'
+              response = requests.get(url, headers=headers)
+              
+              if response.status_code == 200:
+                  repo_languages = response.json()
+                  for lang, bytes_count in repo_languages.items():
+                      language_stats[lang] += bytes_count
+          
+          # Sort by usage and take top 8 languages
+          sorted_languages = sorted(language_stats.items(), key=lambda x: x[1], reverse=True)[:8]
+          
+          # Convert to percentage
+          total_bytes = sum(language_stats.values())
+          languages_data = []
+          
+          for lang, bytes_count in sorted_languages:
+              percentage = (bytes_count / total_bytes * 100) if total_bytes > 0 else 0
+              languages_data.append({
+                  'name': lang,
+                  'bytes': bytes_count,
+                  'percentage': round(percentage, 2)
+              })
+          
+          # Save to file
+          output = {
+              'total_repos': len(repos),
+              'total_bytes': total_bytes,
+              'languages': languages_data,
+              'updated_at': datetime.utcnow().isoformat() + 'Z'
+          }
+          
+          with open('languages.json', 'w', encoding='utf-8') as f:
+              json.dump(output, f, indent=2, ensure_ascii=False)
+          
+          print("Language statistics saved to languages.json")
+          print("\nTop 8 languages:")
+          for lang_data in languages_data:
+              print(f"  {lang_data['name']}: {lang_data['percentage']}%")
+          EOF
+      
+      - name: Generate README badges
+        run: |
+          python << 'EOF'
+          import json
+          import re
+          from urllib.parse import quote
+          
+          # Language color mapping (based on GitHub language colors)
+          colors = {
+              'JavaScript': 'F7DF1E',
+              'TypeScript': '3178C6',
+              'Python': '3776AB',
+              'Java': 'ED8B00',
+              'C++': '00599C',
+              'C': 'A8B9CC',
+              'C#': '239120',
+              'Go': '00ADD8',
+              'Rust': '000000',
+              'PHP': '777BB4',
+              'Ruby': 'CC342D',
+              'Swift': 'FA7343',
+              'Kotlin': '7F52FF',
+              'Dart': '0175C2',
+              'HTML': 'E34F26',
+              'CSS': '1572B6',
+              'Shell': '89E051',
+              'PowerShell': '5391FE',
+              'Vue': '4FC08D',
+              'React': '61DAFB',
+              'Angular': 'DD0031',
+              'Svelte': 'FF3E00',
+              'Dockerfile': '2496ED',
+              'Markdown': '083FA1',
+              'YAML': 'CB171E',
+              'JSON': '000000',
+              'R': '276DC3',
+              'MATLAB': '0076A8',
+              'Scala': 'DC322F',
+              'Perl': '39457E',
+              'Lua': '000080',
+              'Haskell': '5D4F85',
+              'Clojure': '5881D8',
+              'Elixir': '4B275F',
+              'Erlang': 'A90533',
+              'OCaml': 'EC6813',
+              'F#': '378BBA',
+              'FSharp': '378BBA',
+              'D': 'B03931',
+              'Julia': '9558B2',
+              'Nim': 'FFE953',
+              'Crystal': '000100',
+              'Zig': 'F7A41D',
+              'V': '4F87C4',
+              'Solidity': '363636',
+              'Tea': '000000',
+              'Other': 'CCCCCC'
+          }
+          
+          def get_color(lang):
+              return colors.get(lang, colors.get('Other', 'CCCCCC'))
+          
+          # Read language statistics data
+          try:
+              with open('languages.json', 'r', encoding='utf-8') as f:
+                  data = json.load(f)
+          except FileNotFoundError:
+              print("languages.json not found")
+              exit(1)
+          
+          # Generate shields.io badges
+          badges = []
+          for lang_data in data.get('languages', []):
+              lang_name = lang_data['name']
+              percentage = lang_data['percentage']
+              color = get_color(lang_name)
+              
+              # URL encode label and message
+              label = quote(lang_name)
+              message = quote(f"{percentage}%")
+              
+              # Generate badge URL (using flat-square style)
+              badge_url = f"https://img.shields.io/badge/{label}-{message}-{color}?style=flat-square"
+              badges.append(f"![{lang_name}]({badge_url})")
+          
+          # Generate badges section (multiple badges per line)
+          badges_section = "\n".join(badges)
+          
+          # Save to file for README use
+          with open('language-badges.md', 'w', encoding='utf-8') as f:
+              f.write(badges_section)
+          
+          print("Language badges generated in language-badges.md")
+          EOF
+      
+      - name: Update README with badges
+        run: |
+          python << 'EOF'
+          import re
+          
+          # Read README
+          with open('README.md', 'r', encoding='utf-8') as f:
+              readme_content = f.read()
+          
+          # Read generated badges
+          with open('language-badges.md', 'r', encoding='utf-8') as f:
+              badges_content = f.read()
+          
+          # Find or create language statistics section
+          # Find content between <!-- LANGUAGE_STATS_START --> and <!-- LANGUAGE_STATS_END -->
+          start_marker = "<!-- LANGUAGE_STATS_START -->"
+          end_marker = "<!-- LANGUAGE_STATS_END -->"
+          
+          badges_section = f"{start_marker}\n### Top Languages\n\n{badges_content}\n{end_marker}"
+          
+          if start_marker in readme_content and end_marker in readme_content:
+              # Replace existing section
+              pattern = re.compile(
+                  re.escape(start_marker) + r".*?" + re.escape(end_marker),
+                  re.DOTALL
+              )
+              readme_content = pattern.sub(badges_section, readme_content)
+          else:
+              # Add after existing language statistics image
+              if '<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs' in readme_content:
+                  # Add after this line
+                  readme_content = readme_content.replace(
+                      '<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=SteamedBread2333&hide_border=true&no-bg=true&no-frame=true&layout=compact&theme=transparent&langs_count=8" alt="Top Languages"/>',
+                      '<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=SteamedBread2333&hide_border=true&no-bg=true&no-frame=true&layout=compact&theme=transparent&langs_count=8" alt="Top Languages"/>\n\n' + badges_section
+                  )
+              else:
+                  # Add to end of file
+                  readme_content += "\n\n" + badges_section
+          
+          # Save updated README
+          with open('README.md', 'w', encoding='utf-8') as f:
+              f.write(readme_content)
+          
+          print("README.md updated with language badges")
+          EOF
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "rzh881004@icloud.com"
+          git config --local user.name "GitHub Action SteamedBread2333 - Auto Update Language Statistics"
+          git add languages.json README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update language statistics [skip ci]"
+            git push
+          fi
+

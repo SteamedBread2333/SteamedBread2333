@@ -6,6 +6,9 @@
   <img src="./profile-3d-contrib/profile-night-rainbow.svg" />
 </picture>
 
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=SteamedBread2333&hide_border=true&no-bg=true&no-frame=true&layout=compact&theme=transparent&langs_count=8" alt="Top Languages"/>
+<!-- LANGUAGE_STATS_START -->
+### Top Languages
+
+<!-- LANGUAGE_STATS_END -->
 
 ![](https://komarev.com/ghpvc/?username=SteamedBread2333&style=for-the-badge)
