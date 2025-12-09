@@ -26,6 +26,6 @@
 <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=SteamedBread2333&utm_content=farm">
   <img
     src="https://render.gitanimals.org/farms/SteamedBread2333"
-    width="600"
-    height="300"/>
+    height="600"
+  />
 </a>
