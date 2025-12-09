@@ -7,6 +7,7 @@
 </picture>
 
 <!-- LANGUAGE_STATS_START -->
+
 ### Top Languages
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-50.81%25-F7DF1E?style=flat-square)
@@ -17,6 +18,14 @@
 ![Shell](https://img.shields.io/badge/Shell-2.18%25-89E051?style=flat-square)
 ![Less](https://img.shields.io/badge/Less-0.23%25-CCCCCC?style=flat-square)
 ![Makefile](https://img.shields.io/badge/Makefile-0.12%25-CCCCCC?style=flat-square)
+
 <!-- LANGUAGE_STATS_END -->
 
 ![](https://komarev.com/ghpvc/?username=SteamedBread2333&style=for-the-badge)
+
+<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=SteamedBread2333&utm_content=farm">
+  <img
+    src="https://render.gitanimals.org/farms/SteamedBread2333"
+    width="600"
+    height="300"/>
+</a>
