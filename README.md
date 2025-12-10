@@ -1,5 +1,14 @@
 <h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
 
+
+<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=SteamedBread2333&utm_content=line">
+  <img
+    src="https://render.gitanimals.org/lines/SteamedBread2333?pet-id=786411605123483352"
+    width="600"
+    height="50"
+  />
+</a>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-gitblock.svg" />
