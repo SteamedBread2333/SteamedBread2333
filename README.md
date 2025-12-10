@@ -4,7 +4,7 @@
   <img
     src="https://render.gitanimals.org/lines/SteamedBread2333?pet-id=786426838558801097"
     width="600"
-    height="50"
+    height="120"
   />
 </a>
 
