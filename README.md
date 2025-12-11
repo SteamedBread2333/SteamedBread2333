@@ -35,5 +35,3 @@
     height="600"
   />
 </a>
-
-[![An image of @steamedbread2333's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/steamedbread2333)](https://holopin.io/@steamedbread2333)
