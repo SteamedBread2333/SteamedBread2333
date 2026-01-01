@@ -1,36 +1,36 @@
 {
-  "total_repos": 25,
-  "total_bytes": 1370931,
+  "total_repos": 24,
+  "total_bytes": 1356699,
   "languages": [
     {
       "name": "JavaScript",
       "bytes": 669432,
-      "percentage": 48.83
+      "percentage": 49.34
     },
     {
       "name": "HTML",
       "bytes": 447795,
-      "percentage": 32.66
+      "percentage": 33.01
     },
     {
       "name": "TypeScript",
-      "bytes": 142903,
-      "percentage": 10.42
+      "bytes": 128671,
+      "percentage": 9.48
     },
     {
       "name": "CSS",
       "bytes": 48626,
-      "percentage": 3.55
+      "percentage": 3.58
     },
     {
       "name": "Go",
       "bytes": 30773,
-      "percentage": 2.24
+      "percentage": 2.27
     },
     {
       "name": "Shell",
       "bytes": 27061,
-      "percentage": 1.97
+      "percentage": 1.99
     },
     {
       "name": "Less",
@@ -43,5 +43,5 @@
       "percentage": 0.11
     }
   ],
-  "updated_at": "2025-12-31T02:10:53.092197Z"
+  "updated_at": "2026-01-01T02:28:01.965338Z"
 }
