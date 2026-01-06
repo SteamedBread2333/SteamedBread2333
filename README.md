@@ -17,8 +17,8 @@
 <!-- LANGUAGE_STATS_START -->
 ### Top Languages
 
-![JavaScript](https://img.shields.io/badge/JavaScript-51.32%25-F7DF1E?style=flat-square)
-![HTML](https://img.shields.io/badge/HTML-31.73%25-E34F26?style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-51.35%25-F7DF1E?style=flat-square)
+![HTML](https://img.shields.io/badge/HTML-31.69%25-E34F26?style=flat-square)
 ![TypeScript](https://img.shields.io/badge/TypeScript-9.1%25-3178C6?style=flat-square)
 ![CSS](https://img.shields.io/badge/CSS-3.46%25-1572B6?style=flat-square)
 ![Go](https://img.shields.io/badge/Go-2.18%25-00ADD8?style=flat-square)
