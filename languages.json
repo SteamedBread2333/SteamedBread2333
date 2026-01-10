@@ -1,41 +1,41 @@
 {
   "total_repos": 25,
-  "total_bytes": 1748687,
+  "total_bytes": 1870663,
   "languages": [
     {
       "name": "JavaScript",
-      "bytes": 923927,
-      "percentage": 52.84
+      "bytes": 1041277,
+      "percentage": 55.66
     },
     {
       "name": "HTML",
-      "bytes": 545826,
-      "percentage": 31.21
+      "bytes": 546489,
+      "percentage": 29.21
     },
     {
       "name": "TypeScript",
       "bytes": 133005,
-      "percentage": 7.61
+      "percentage": 7.11
     },
     {
       "name": "CSS",
-      "bytes": 81234,
-      "percentage": 4.65
+      "bytes": 85197,
+      "percentage": 4.55
     },
     {
       "name": "Go",
       "bytes": 30773,
-      "percentage": 1.76
+      "percentage": 1.65
     },
     {
       "name": "Shell",
       "bytes": 29581,
-      "percentage": 1.69
+      "percentage": 1.58
     },
     {
       "name": "Less",
       "bytes": 2880,
-      "percentage": 0.16
+      "percentage": 0.15
     },
     {
       "name": "Makefile",
@@ -43,5 +43,5 @@
       "percentage": 0.08
     }
   ],
-  "updated_at": "2026-01-09T02:19:18.232148Z"
+  "updated_at": "2026-01-10T02:09:09.151208Z"
 }
