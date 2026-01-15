@@ -17,14 +17,14 @@
 <!-- LANGUAGE_STATS_START -->
 ### Top Languages
 
-![JavaScript](https://img.shields.io/badge/JavaScript-56.28%25-F7DF1E?style=flat-square)
-![HTML](https://img.shields.io/badge/HTML-28.81%25-E34F26?style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-7.01%25-3178C6?style=flat-square)
-![CSS](https://img.shields.io/badge/CSS-4.49%25-1572B6?style=flat-square)
-![Go](https://img.shields.io/badge/Go-1.62%25-00ADD8?style=flat-square)
-![Shell](https://img.shields.io/badge/Shell-1.56%25-89E051?style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-56.03%25-F7DF1E?style=flat-square)
+![HTML](https://img.shields.io/badge/HTML-28.52%25-E34F26?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-7.45%25-3178C6?style=flat-square)
+![CSS](https://img.shields.io/badge/CSS-4.45%25-1572B6?style=flat-square)
+![Go](https://img.shields.io/badge/Go-1.61%25-00ADD8?style=flat-square)
+![Shell](https://img.shields.io/badge/Shell-1.54%25-89E051?style=flat-square)
+![SCSS](https://img.shields.io/badge/SCSS-0.18%25-CCCCCC?style=flat-square)
 ![Less](https://img.shields.io/badge/Less-0.15%25-CCCCCC?style=flat-square)
-![Makefile](https://img.shields.io/badge/Makefile-0.08%25-CCCCCC?style=flat-square)
 <!-- LANGUAGE_STATS_END -->
 
 ![](https://komarev.com/ghpvc/?username=SteamedBread2333&style=for-the-badge)
