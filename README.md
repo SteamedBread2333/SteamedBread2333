@@ -17,11 +17,11 @@
 <!-- LANGUAGE_STATS_START -->
 ### Top Languages
 
-![JavaScript](https://img.shields.io/badge/JavaScript-56.55%25-F7DF1E?style=flat-square)
-![HTML](https://img.shields.io/badge/HTML-26.65%25-E34F26?style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-8.71%25-3178C6?style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-56.58%25-F7DF1E?style=flat-square)
+![HTML](https://img.shields.io/badge/HTML-26.63%25-E34F26?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-8.7%25-3178C6?style=flat-square)
 ![CSS](https://img.shields.io/badge/CSS-4.83%25-1572B6?style=flat-square)
-![Go](https://img.shields.io/badge/Go-1.48%25-00ADD8?style=flat-square)
+![Go](https://img.shields.io/badge/Go-1.47%25-00ADD8?style=flat-square)
 ![Shell](https://img.shields.io/badge/Shell-1.42%25-89E051?style=flat-square)
 ![SCSS](https://img.shields.io/badge/SCSS-0.16%25-CCCCCC?style=flat-square)
 ![Less](https://img.shields.io/badge/Less-0.14%25-CCCCCC?style=flat-square)
