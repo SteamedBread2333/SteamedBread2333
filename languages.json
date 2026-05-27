@@ -1,10 +1,10 @@
 {
   "total_repos": 28,
-  "total_bytes": 2090122,
+  "total_bytes": 2090002,
   "languages": [
     {
       "name": "JavaScript",
-      "bytes": 1184028,
+      "bytes": 1183908,
       "percentage": 56.65
     },
     {
@@ -43,5 +43,5 @@
       "percentage": 0.14
     }
   ],
-  "updated_at": "2026-05-26T04:12:44.143246Z"
+  "updated_at": "2026-05-27T04:26:01.825969Z"
 }
