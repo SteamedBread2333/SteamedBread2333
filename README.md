@@ -11,13 +11,13 @@
 <!-- LANGUAGE_STATS_START -->
 ### Top Languages
 
-![JavaScript](https://img.shields.io/badge/JavaScript-51.57%25-F7DF1E?style=flat-square)
-![HTML](https://img.shields.io/badge/HTML-20.9%25-E34F26?style=flat-square)
-![Python](https://img.shields.io/badge/Python-10.47%25-3776AB?style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-6.18%25-3178C6?style=flat-square)
-![Go](https://img.shields.io/badge/Go-5.85%25-00ADD8?style=flat-square)
-![CSS](https://img.shields.io/badge/CSS-3.43%25-1572B6?style=flat-square)
-![Shell](https://img.shields.io/badge/Shell-1.28%25-89E051?style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-51.03%25-F7DF1E?style=flat-square)
+![HTML](https://img.shields.io/badge/HTML-18.79%25-E34F26?style=flat-square)
+![Python](https://img.shields.io/badge/Python-10.36%25-3776AB?style=flat-square)
+![Go](https://img.shields.io/badge/Go-8.73%25-00ADD8?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-6.11%25-3178C6?style=flat-square)
+![CSS](https://img.shields.io/badge/CSS-3.39%25-1572B6?style=flat-square)
+![Shell](https://img.shields.io/badge/Shell-1.27%25-89E051?style=flat-square)
 ![SCSS](https://img.shields.io/badge/SCSS-0.12%25-CCCCCC?style=flat-square)
 <!-- LANGUAGE_STATS_END -->
 
