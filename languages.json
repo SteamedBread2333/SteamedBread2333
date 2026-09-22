@@ -1,47 +1,47 @@
 {
   "total_repos": 33,
-  "total_bytes": 3211737,
+  "total_bytes": 3317188,
   "languages": [
     {
       "name": "JavaScript",
       "bytes": 1630078,
-      "percentage": 50.75
+      "percentage": 49.14
     },
     {
       "name": "HTML",
       "bytes": 567013,
-      "percentage": 17.65
+      "percentage": 17.09
     },
     {
       "name": "Go",
-      "bytes": 342020,
-      "percentage": 10.65
+      "bytes": 447471,
+      "percentage": 13.49
     },
     {
       "name": "Python",
       "bytes": 307759,
-      "percentage": 9.58
+      "percentage": 9.28
     },
     {
       "name": "TypeScript",
       "bytes": 192104,
-      "percentage": 5.98
+      "percentage": 5.79
     },
     {
       "name": "CSS",
       "bytes": 125689,
-      "percentage": 3.91
+      "percentage": 3.79
     },
     {
       "name": "Shell",
       "bytes": 37864,
-      "percentage": 1.18
+      "percentage": 1.14
     },
     {
       "name": "SCSS",
       "bytes": 3421,
-      "percentage": 0.11
+      "percentage": 0.1
     }
   ],
-  "updated_at": "2026-09-21T04:31:40.071914Z"
+  "updated_at": "2026-09-22T04:27:25.064474Z"
 }
