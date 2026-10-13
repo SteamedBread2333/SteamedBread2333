@@ -11,12 +11,12 @@
 <!-- LANGUAGE_STATS_START -->
 ### Top Languages
 
-![JavaScript](https://img.shields.io/badge/JavaScript-39.95%25-F7DF1E?style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-39.92%25-F7DF1E?style=flat-square)
 ![HTML](https://img.shields.io/badge/HTML-21.71%25-E34F26?style=flat-square)
-![Go](https://img.shields.io/badge/Go-14.78%25-00ADD8?style=flat-square)
-![Python](https://img.shields.io/badge/Python-14.46%25-3776AB?style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-4.69%25-3178C6?style=flat-square)
-![CSS](https://img.shields.io/badge/CSS-3.07%25-1572B6?style=flat-square)
+![Go](https://img.shields.io/badge/Go-14.77%25-00ADD8?style=flat-square)
+![Python](https://img.shields.io/badge/Python-14.5%25-3776AB?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-4.68%25-3178C6?style=flat-square)
+![CSS](https://img.shields.io/badge/CSS-3.06%25-1572B6?style=flat-square)
 ![Shell](https://img.shields.io/badge/Shell-1.13%25-89E051?style=flat-square)
 ![SCSS](https://img.shields.io/badge/SCSS-0.08%25-CCCCCC?style=flat-square)
 <!-- LANGUAGE_STATS_END -->
