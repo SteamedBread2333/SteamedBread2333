@@ -1,7 +1,5 @@
 <h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
 
-[![SteamedBread2333's GitHub stats](https://github-immortality.vercel.app/api?username=SteamedBread2333)](https://github.com/SteamedBread2333)
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-gitblock.svg" />
@@ -29,3 +27,5 @@
     height="600"
   />
 </a>
+
+[![SteamedBread2333's GitHub stats](https://github-immortality.vercel.app/api?username=SteamedBread2333)](https://github.com/SteamedBread2333)
